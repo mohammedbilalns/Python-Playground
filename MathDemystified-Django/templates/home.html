@@ -1,0 +1,28 @@
+
+
+{% extends 'layout.html' %}
+
+{% load static %}
+{% block title %}
+Home 
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" src="{% static 'images/infinitygif.gif' %}" alt="" width="150" height="150">
+    <h1 class="display-5 fw-bold text-body-emphasis">Math Demystified</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Let's demystify the magic of numbers and unleash your inner mathematician!.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+       <a href="./pages/notes.html"><button type="button" class="btn btn-primary btn-lg px-4 gap-3" >Notes</button> </a> 
+        <a href="./pages/Questions.html"><button type="button" class="btn btn-outline-secondary btn-lg px-4">Questions</button></a>
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}

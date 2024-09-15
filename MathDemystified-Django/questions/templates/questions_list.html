@@ -1,0 +1,76 @@
+
+
+{% extends 'layout.html' %}
+
+{% load static %}
+{% block title %}
+ 
+Notes 
+
+{% endblock %}
+
+
+
+{% block content %}
+<div class="container">
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div
+          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+        >
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary-emphasis"
+              >HSE
+            </strong>
+            <h3 class="mb-0">Class 11 SCERT</h3>
+
+            <p class="card-text mb-auto">
+              HIgher Secondary Class 11 Questions based on the latest Kerala Scert
+              Syllabus.
+            </p>
+            <a
+              href="./questions/class11.html"
+              class="icon-link gap-1 icon-link-hover stretched-link"
+            >
+              View Questions
+              <img src="{% static "images/chevron-right.svg" %}" alt="" />
+            </a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="{% static "images/11pic.jpg" %}" width="200px" height="250px" alt="">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div
+          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+        >
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success-emphasis"
+              >HSE</strong
+            >
+            <h3 class="mb-0">Class 12 SCERT</h3>
+            <p class="mb-auto">
+              HIgher Secondary Class 12 Questions based on the latest Kerala Scert
+              Syllabus.
+            </p>
+            <a
+              href="./questions/class12.html"
+              class="icon-link gap-1 icon-link-hover stretched-link"
+            >
+              View Questions
+              <img src="{% static "images/chevron-right.svg" %}" alt="" />
+            </a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+<img src="{% static "images/12pic.jpg" %}" width="200px" height="250px" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+{% endblock %}

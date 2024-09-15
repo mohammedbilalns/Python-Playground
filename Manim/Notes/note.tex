@@ -1,0 +1,38 @@
+\documentclass[12pt]{article}
+\usepackage{minted}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=2cm]{geometry}
+\usepackage{multicol,amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{pgfplots}
+
+\titleformat{\subsection}
+{\color{red}\normalfont\Large\bfseries}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{blue}\normalfont\large\bfseries}
+{\thesubsubsection}{1em}{}
+
+\titlespacing{\subsection}{0pt}{0pt}{0pt} % Adjust the spacing here
+\titlespacing{\subsubsection}{0pt}{\baselineskip}{0pt} % Adjust the spacing here
+\newcommand{\summation}[2]{\sum\limits^{#1}_{#2}}
+
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{Manim} }
+\end{center}
+
+\subsection*{Text}
+To display text in center with a 3 sec wait time.
+\begin{minted}{python}
+from manim import *
+
+class WriteText(Scene):
+    def construct(self):
+        text = Text("This is a just a text")
+        self.play(Write(text))
+        self.wait(3)
+  \end{minted}
+\end{document}

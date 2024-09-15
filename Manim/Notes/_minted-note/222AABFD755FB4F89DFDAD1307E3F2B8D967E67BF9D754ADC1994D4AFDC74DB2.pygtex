@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{manim} \PYG{k+kn}{import} \PYG{o}{*}
+
+\PYG{k}{class} \PYG{n+nc}{WriteText}\PYG{p}{(}\PYG{n}{Scene}\PYG{p}{):}
+    \PYG{k}{def} \PYG{n+nf}{construct}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n}{text} \PYG{o}{=} \PYG{n}{Text}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}This is a just a text\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{play}\PYG{p}{(}\PYG{n}{Write}\PYG{p}{(}\PYG{n}{text}\PYG{p}{))}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{wait}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{)}
+\end{Verbatim}

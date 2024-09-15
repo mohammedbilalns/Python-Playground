@@ -1,0 +1,107 @@
+
+
+{% extends 'layout.html' %}
+
+{% load static %}
+{% block title %}
+ 
+Notes 
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div
+          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+        >
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary-emphasis"
+              >HSE
+            </strong>
+            <h3 class="mb-0">Class 11 SCERT</h3>
+
+            <p class="card-text mb-auto">
+              HIgher Secondary Class 11 notes based on the latest Kerala Scert
+              Syllabus.
+            </p>
+            <a
+              href="{% url "notes:plusone" %}"
+              class="icon-link gap-1 icon-link-hover stretched-link"
+            >
+              Download Notes
+              <img src="{% static 'images/chevron-right.svg' %}" alt="" />
+            </a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="{% static "images/11pic.jpg" %}" width="200px" height="250px" alt="">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div
+          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+        >
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success-emphasis"
+              >HSE</strong
+            >
+            <h3 class="mb-0">Class 12 SCERT</h3>
+            <p class="mb-auto">
+              HIgher Secondary Class 12 notes based on the latest Kerala Scert
+              Syllabus.
+            </p>
+            <a
+              href="{% url "notes:plustwo" %}"
+              class="icon-link gap-1 icon-link-hover stretched-link"
+            >
+              Download Notes
+              <img src="{% static "images/chevron-right.svg" %}" alt="" />
+            </a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="{% static "images/12pic.jpg" %}" width="200px" height="250px" alt="">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6">
+        <div
+          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+        >
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success-emphasis"
+              >UG/PG</strong
+            >
+            <h3 class="mb-0">Linear Algebra </h3>
+            <p class="mb-auto">
+              UG/PG linear algebra random notes 
+            </p>
+            <a
+              href="{% url "notes:linearalgebra" %}"
+              class="icon-link gap-1 icon-link-hover stretched-link"
+            >
+              View Notes
+              <img src="{% static "images/chevron-right.svg" %}" alt="" />
+            </a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="{% static "images/12pic.jpg" %}" width="200px" height="250px" alt="">
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+    
+
+{% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        Django App
+
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/main.js' %} "  defer></script>
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>
+</head>
+<body>
+    <nav>
+        <a href="/">
+            <span role="img" aria-label="Home" title="home">🏠</span>
+        </a> |
+        <a href="/about"> <span role='img' aria-label="About" title="about">😊</span></a> |
+        <a href="{% url 'posts:list' %}"> <span role="img" aria-label="Posts" title="posts">📰</span></a> |
+        <a href="{% url 'users:register' %}"> <span role="img" aria-label="User Registration" title="Sign Up">🚀</span></a> |
+        <a href="{% url 'users:login' %}"> <span role="img" aria-label="User Login" title="Sign in">🔒</span></a>|
+        <a href="{% url 'posts:new-post' %}"> <span role="img" aria-label="New post" title="New post">🆕</span></a>|
+
+        <form class="logout" action="{% url 'users:logout' %}" method="post">
+            {% csrf_token %} 
+            <button class="logout-button" aria-label="User Logout" title="User Logout">👋</button>
+        </form>
+
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+
+    </main>
+    
+    
+</body>
+</html>
